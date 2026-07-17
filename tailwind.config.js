@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         display: ['"Bodoni Moda"', 'serif'],
         sans: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        // Neither Latin face carries Arabic glyphs, so the brand name needs its
+        // own family rather than falling through to a system default.
+        arabic: ['Cairo', '"Segoe UI"', 'Tahoma', 'sans-serif'],
       },
       transitionDuration: {
         400: '400ms',

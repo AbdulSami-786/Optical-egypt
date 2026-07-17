@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCart } from '../context/CartContext'
+import BrandName from './BrandName'
 import Logo from './Logo'
 import Marquee from './Marquee'
 
@@ -191,7 +192,9 @@ export default function Navbar() {
             </ul>
             <div className="flex items-center justify-between text-xs uppercase tracking-[0.2em] text-neutral-500">
               <span>Cairo · Milan</span>
-              <span>© {new Date().getFullYear()} AL-ALAMIA</span>
+              <span>
+                © {new Date().getFullYear()} <BrandName />
+              </span>
             </div>
           </motion.div>
         )}

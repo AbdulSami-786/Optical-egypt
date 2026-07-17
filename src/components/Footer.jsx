@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import BrandName from './BrandName'
 import Logo from './Logo'
 import MagneticButton from './MagneticButton'
 import Marquee from './Marquee'
@@ -53,7 +54,11 @@ export default function Footer() {
       {/* Oversized marquee wordmark */}
       <div className="overflow-hidden border-b border-ink-line py-8">
         <Marquee
-          text="AL-ALAMIA OPTICS — FRAME YOUR PERSPECTIVE"
+          text={
+            <>
+              <BrandName /> — FRAME YOUR PERSPECTIVE
+            </>
+          }
           repeat={6}
           speed="fast"
           className="wordmark text-5xl text-ink-line md:text-8xl [&_span]:tracking-tight"
@@ -137,7 +142,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-neutral-600">
-            © {new Date().getFullYear()} AL-ALAMIA OPTICS. Handcrafted in Cairo &amp;
+            © {new Date().getFullYear()} <BrandName />. Handcrafted in Cairo &amp;
             Milan. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-6 text-xs text-neutral-600">

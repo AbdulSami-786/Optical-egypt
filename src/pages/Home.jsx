@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
+import BrandName from '../components/BrandName'
 import MagneticButton from '../components/MagneticButton'
 import ProductCard from '../components/ProductCard'
 import Marquee from '../components/Marquee'
@@ -440,7 +441,7 @@ function ClosingCTA() {
     <section className="relative overflow-hidden py-28 md:py-40">
       <div className="pointer-events-none absolute inset-0 flex items-center">
         <Marquee
-          text="AL-ALAMIA OPTICS"
+          text={<BrandName />}
           repeat={10}
           className="wordmark text-[7rem] text-ink-line/60 md:text-[13rem]"
         />

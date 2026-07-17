@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import BrandName, { BRAND_AR } from './BrandName'
 
 /**
  * Brand lockup.
@@ -25,19 +26,19 @@ export default function Logo({
   return (
     <Link
       to="/"
-      aria-label="Al-Alamia Optics — home"
+      aria-label={`${BRAND_AR} — home`}
       className="group inline-flex items-center"
     >
       {failed ? (
         <span
           className={`wordmark whitespace-nowrap leading-none ${fallbackClassName}`}
         >
-          Al-Alamia Optics
+          <BrandName />
         </span>
       ) : (
         <img
           src={LOGO_SRC}
-          alt="Al-Alamia Optics"
+          alt={BRAND_AR}
           onError={() => setFailed(true)}
           className={`w-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] ${className}`}
         />
